@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru_RU" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=550"> -->
+    <title>Studyup - онлайн образование</title>
+    <meta content="Studyup - онлайн образование" name="keywords">
+    <meta content="Studyup - онлайн образование" name="description">
+
+    <link rel="stylesheet" type="text/css" href="/skins/src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/skins/src/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        var lang = 'ru';
+        var lang_values = {
+            PleaseEnterTrueEmail: 'Пожалуйста введите правильный адрес электронной почты',
+            Error: 'Ошибка',
+            setActive: '',
+            EmailExists: 'Данный адрес уже подписан на рассылку',
+            SuccessSubscribe: 'Ваш адрес успешно подписан на рассылку новостей',
+            ThankYou: 'Спасибо!',
+            PleaseFillFormData: 'Пожалуйста заполните все поля формы',
+            WeContactSoon: 'Мы свяжемся с вами в ближайшее время',
+            PleaseFillAllData: 'Пожалуйста заполните все данные',
+            ManagersContactYouSoon: 'Наши менеджеры свяжутся с вами в ближайшее время',
+            PleaseEnterYourEmail: 'Укажите Ваш e-mail',
+            RestorePassword: 'Восстановление пароля',
+            SendPassword: 'Выслать пароль',
+            PleaseFillFields: 'Пожалуйста заполните поля',
+            UserNotFound: 'Логин или пароль не верны',
+            PasswordWasSixSymbols: 'Пароль должен быть не менее 6 символов',
+            EmailUseAnotherUser: 'Данный e-mail адрес уже используется другим пользователем',
+            YourDataSave: 'Ваши данные успешно сохранены',
+            ThisEmail: 'E-mail адрес ',
+            NotInDatabase: ' в базе не найден',
+            LetterWithInstructionSend: 'Письмо с инструкциями отправлено на адрес',
+            CheckContractOfert: 'Вы должны принять публичный договор оферты',
+            PasswordDontMatch: 'Введенные пароли не совпадают',
+            OldPasswordWasNotCorrect: 'Старый пароль не верный',
+            PleaseEnterLogin: 'Пожалуйста введите логин',
+            PleaseEnterPhone: 'Пожалуйста введите телефон',
+            RefNotInBase: 'Такого реферала не существует',
+            Code2FA: '',
+            PleaseEnterYourCodeFa: '',
+            CodeSMS: '',
+            PleaseEnterYourCodeSMS: '',
+            no_verify_accounts: '',
+            wrong_codefa: '',
+            output_request_email: '',
+            success_payments_accounts: '',
+            refill_all_payments: '',
+            payment_account_not_unique: '',
+            confirm_payments_accounts_email: '',
+            EnterSite: '',
+            AccountBlocked: '',
+            AllRefundExplain: '',
+            BlockCabinets: '',
+            ErrorGoogleCode: '',
+            WrongCodeFA: '',
+            WrongCodeSMS: '',
+            output_min_summ: 'Минимальная сумма для вывода на карты $5, на платежные системы $1',
+            ThanksForSubscription: ''
+        }
+    </script>
+    <link rel="stylesheet" href="/source/css/messi.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="aside">
+            <ul>
+                <li>
+                    <div class="burger">
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                    </div>
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/skins/src/img/logo_large.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="header_left_holder d-block d-md-none">
+                    <a href="">
+                        <div class="balance_holder">
+                            <svg width="32" height="32"><use xlink:href="/skins/src/img/aside/icons.svg#header_wallet"></use></svg>
+                            <div class="balnce_stats">
+                                <span>
+									Баланс
+								</span> 0.00 грн
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="header_left_holder d-flex flex-direction-row d-md-none">
+                    <div class="letter">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle justify-content-center" href="#" role="button" id="dropdownLetter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="num">0</span>
+                                <svg width="22" height="18"><use xlink:href="/skins/src/img/aside/icons.svg#letter"></use></svg>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right drop_long drop_letters" aria-labelledby="dropdownLetter">
+                                <h3>
+                                    Сообщения
+                                </h3>
+                                <div class="drop_letter_holder">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bell">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle justify-content-center" href="#" role="button" id="dropdownBell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="num">0</span>
+                                <svg width="21" height="21"><use xlink:href="/skins/src/img/aside/icons.svg#bell"></use></svg>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right drop_long drop_bell" aria-labelledby="dropdowBell">
+                                <h3>
+                                    Уведомления
+                                </h3>
+                                <div class="drop_bell_holder">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/" title="Моё обучение">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#study"></use></svg>
+                        <span>Моё обучение</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/dialogs" title="Чат">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#chat"></use></svg>
+                        <span>Чат</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/teachers" title="Репетиторы">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#teacher"></use></svg>
+                        <span>Репетиторы</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/child" title="Дошкольникам">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#child"></use></svg>
+                        <span>Дошкольникам</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/homework" title="Домашняя работа">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#homework"></use></svg>
+                        <span>Домашняя работа</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/settings" title="Профиль">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#profile"></use></svg>
+                        <span>Профиль</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/help" title="Чаво">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#help"></use></svg>
+                        <span>Чаво</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="aside_bg"></div>
+        </aside>
+        <div class="right_side">
+            <header>
+                <div class="header_holder">
+                    <div class="logo_holder">
+                        <a href="/">
+                            <img src="/skins/study/images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="burger d-block d-md-none">
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                    </div>
+                    <div class="header_left_holder">
+                        <ul>
+                            <!-- IF Кабина Препода Старт -->
+                            <li class="d-none d-md-block">
+                                <a href="">
+                                    <div class="balance_holder">
+                                        <svg width="32" height="32"><use xlink:href="/skins/src/img/aside/icons.svg#header_wallet"></use></svg>
+                                        <div class="balnce_stats">
+                                            <span>
+												Баланс
+											</span> 0.00 грн
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- IF Кабина Препода Энд -->
+                            <li class="d-none d-md-block">
+                                <div class="letter">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownLetter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="num">0</span>
+                                            <svg width="22" height="18"><use xlink:href="/skins/src/img/aside/icons.svg#letter"></use></svg>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right drop_long drop_letters" aria-labelledby="dropdownLetter">
+                                            <h3>
+                                                Сообщения
+                                            </h3>
+                                            <div class="drop_letter_holder">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="d-none d-md-block">
+                                <div class="bell">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownBell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="num">0</span>
+                                            <svg width="21" height="21"><use xlink:href="/skins/src/img/aside/icons.svg#bell"></use></svg>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right drop_long drop_bell" aria-labelledby="dropdowBell">
+                                            <h3>
+                                                Уведомления
+                                            </h3>
+                                            <div class="drop_bell_holder">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="human">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuHuman" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="/source/images/empty-avatar.jpg" class="avatar">
+                                            <span>
+												DMYTRO 
+											</span>
+                                            <img src="/skins/src/img/header_down_arrow.png" alt="">
+                                        </a>
+                                        <div class="dropdown-menu drop_short dropdown-menu-right" aria-labelledby="dropdownMenuHuman">
+                                            <div class="langs_holder">
+                                                <div class="active_lang">
+                                                    <img src="/skins/src/img/cif_ua.png" alt="">
+                                                    <a href="/ua/">UA</a>
+                                                </div>
+                                                <div>
+                                                    <img src="/skins/src/img/cif_ru.png" alt="">
+                                                    <a href="/ru/">RU</a>
+                                                </div>
+                                                <div>
+                                                    <img src="/skins/src/img/cif_us.png" alt="">
+                                                    <a href="/en/">EN</a>
+                                                </div>
+                                            </div>
+                                            <div class="logout">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.875 10.125V11.6875C9.875 12.1019 9.71038 12.4993 9.41735 12.7924C9.12433 13.0854 8.7269 13.25 8.3125 13.25H2.0625C1.6481 13.25 1.25067 13.0854 0.957646 12.7924C0.66462 12.4993 0.5 12.1019 0.5 11.6875V2.3125C0.5 1.8981 0.66462 1.50067 0.957646 1.20765C1.25067 0.91462 1.6481 0.75 2.0625 0.75H8C8.86289 0.75 9.875 1.44961 9.875 2.3125V3.875" stroke="#2E3D4B" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.375 10.125L15.5 7L12.375 3.875" stroke="#2E3D4B" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.875 7H14.875" stroke="#2E3D4B" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                                <a href="/user/logout/">Выход</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <style>
+                .box-book {
+                    display: none;
+                }
+            </style>
