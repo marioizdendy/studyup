@@ -1,0 +1,533 @@
+<footer class="d-none">
+    footer
+</footer>
+</div>
+
+<script src="/skins/src/js/jquery-3.6.0.min.js"></script>
+<script src="/skins/src/js/bootstrap.bundle.js"></script>
+
+<script>
+    // aside
+    $('.burger').on('click', function() {
+        $('.aside').toggleClass('open');
+    });
+    $('.aside_bg').on('click', function() {
+        $('.aside.open').removeClass('open');
+    });
+
+    // teacher profile разрешение на редактирование textarea
+    $('.teacher_skill .teacher_skill_about .edit').on('click', function() {
+        a = $('.teacher_about_text').attr('disabled');
+        if (a == 'disabled') {
+            $('.teacher_about_text').prop("disabled", false);
+        } else {
+            $('.teacher_about_text').prop("disabled", true);
+        }
+    });
+</script>
+
+
+<script>
+    // pupil profile select tabs
+    $(".pupil_profile .category_tab").click(function() {
+        $(".pupil_profile .category_tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".category_tab_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil profile select tabs
+    $(".video_right_now_finished_tabs").click(function() {
+        $(".video_right_now_finished_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .video_right_now_finished_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil reprtitors select tabs
+    $(".rep_plan_cancel_over_tabs").click(function() {
+        $(".rep_plan_cancel_over_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .rep_plan_cancel_over_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil homework select tabs
+    $(".hw_plan_cancel_over_tabs").click(function() {
+        $(".hw_plan_cancel_over_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .hw_plan_cancel_over_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil before school select tabs
+    $(".before_plan_cancel_over_tabs").click(function() {
+        $(".before_plan_cancel_over_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .before_plan_cancel_over_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil lessons select tabs
+    $(".pupil_lessons .lessons_ul_item_tab").click(function() {
+        $(".pupil_lessons .lessons_ul_item_tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_lessons .lessons_ul_item_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+</script>
+<script src="/skins/study/js/app_teachers.js?ver=1637902114"></script>
+<link href="https://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet">
+<script>
+    $(function() {
+        $('#teachers_subjects').change(function() {
+            $(this).parent().submit();
+        });
+        $('.teachers_holder').mouseover(function() {
+            $('.box-book').hide();
+            $(this).parent().parent().find('.box-book').show();
+        });
+    });
+</script>
+<style>
+    /* Appointment Pop Up */
+    
+    .box-book {
+        background: #FFFFFF;
+        box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .box-book p {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+        color: #A4A4A4;
+    }
+    
+    .box-book p span.price {
+        font-weight: bold;
+        color: #2E3D4B;
+    }
+    
+    .box-book a.blue_button {
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .box-book a.white_border_btn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 12px 19px;
+        color: #2E3D4B;
+        border: 1px solid #3A9BF4;
+        box-sizing: border-box;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+    .box-book .box-book__content {
+        padding: 20px;
+    }
+    
+    .appointment-hdr-back {
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+    }
+    
+    .appointment-hdr-back .fa {
+        vertical-align: middle;
+        font-size: 16px;
+        color: #555;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .appointment-form {
+        padding: 0 2%;
+        text-align: center;
+    }
+    
+    .appointment-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .appointment-input input {
+        font-family: "Montserrat", sans-serif;
+        padding: 6px;
+        font-size: 14px;
+    }
+    
+    .appointment-input select {
+        font-size: 14px;
+    }
+    
+    .appointment-input label {
+        font-family: "Montserrat", sans-serif;
+        color: #777;
+    }
+    
+    .appointment-input label em {
+        color: #cc5151;
+    }
+    
+    .appointment-button {
+        margin: 20px auto 0 auto;
+    }
+    
+    #appointment-continue {
+        visibility: hidden;
+    }
+    
+    .appointment-part-1 {
+        position: relative;
+    }
+    
+    .appointment-part-2 {
+        display: none;
+    }
+    
+    #appointment-doctor-wrapper {
+        display: block;
+    }
+    
+    .appointment-slot {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .appointment-slot>p {
+        text-align: left;
+        color: #EfA752;
+        font-size: 12px;
+        padding: 0 0 10px 0;
+        display: none;
+    }
+    
+    .appointment-slot>div {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 5px 5px 5px;
+    }
+    
+    .appointment-slot>div input {
+        display: inline-block;
+        position: absolute;
+        width: 1%;
+        visibility: hidden;
+    }
+    
+    .appointment-slot>div input:disabled+label {
+        color: #FFF;
+        background: #cc5151;
+        border: 1px solid #cc5151;
+        cursor: not-allowed;
+    }
+    
+    .appointment-slot>div input:checked+label {
+        background: #d8ebfd;
+        border-radius: 5px;
+    }
+    
+    .appointment-slot>div label {
+        width: 45px;
+        padding: 5px;
+        cursor: pointer;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #3A9BF4;
+    }
+    
+    .appointment-slot>div label:hover {
+        background: #d8ebfd;
+        border-radius: 5px;
+    }
+    
+    #appointment-no-slot {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    .appointment-enterd-value {
+        width: 100%;
+        background: #f4f4f4;
+        padding: 10px;
+        margin: 0 auto 10px auto;
+        border-radius: 2px;
+    }
+    
+    .appointment-enterd-value>div {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        text-align: left;
+    }
+    
+    .appointment-enterd-value>div p {
+        display: inline-block;
+        vertical-align: middle;
+        width: 85%;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        color: #333;
+        margin: 0;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .appointment-enterd-value>div .fa {
+        vertical-align: middle;
+        width: 15%;
+        height: 24px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #EfA752;
+        padding: 0 5px 0 0;
+    }
+    
+    .appointment-loading {
+        padding: 30px 0;
+        display: none;
+    }
+    
+    .appointment-loading-gif {
+        width: 200px;
+        height: 150px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-image: url(../images/loader.gif);
+    }
+    
+    .appointment-success {
+        display: none;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .appointment-success span {
+        display: inline-block;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .appointment-success p {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+    }
+    
+    .appointment-mail-icon {
+        padding: 20px 0;
+    }
+    
+    .appointment-mail-icon .fa {
+        font-size: 64px;
+        color: #8BC34A;
+    }
+    
+    #appointment-date-wrapper {
+        display: none;
+    }
+    
+    #appointment-no-slot {
+        padding: 0 20px;
+    }
+    
+    .or-label {
+        position: relative;
+        width: 50%;
+        margin: 30px auto;
+        height: 2px;
+        background: #CCC;
+    }
+    
+    .or-label::after {
+        content: 'ИЛИ';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -15px;
+        width: 60px;
+        font-size: 16px;
+        color: #EfA752;
+        background: #FFF;
+        padding: 5px 10px;
+    }
+    
+    #search-doctor {
+        position: relative;
+    }
+    
+    #search-doctor ul {
+        display: none;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        text-align: left;
+        padding: 10px;
+        border: 1px solid #DDD;
+        border-top: 0;
+        background: #EEE;
+    }
+    
+    #search-doctor ul li {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        color: #333;
+        padding: 5px;
+    }
+    
+    .appointment-option {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 111;
+    }
+    
+    .appointment-option>div .fa {
+        width: 42px;
+        height: 42px;
+        line-height: 39px;
+        text-align: center;
+        font-size: 24px;
+        color: #FFF;
+        background: #EfA752;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    
+    .appointment-option>div .fa:hover {
+        color: #333;
+    }
+    
+    .appointment-option .appointment-option-department {
+        display: none;
+    }
+    
+    .appointment-option .appointment-option-doctor {
+        display: none;
+    }
+    
+    .mdl-button,
+    .mdl-textfield__input {
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .mdl-textfield__label::after,
+    .mdl-selectfield__label::after {
+        background-color: #EfA752;
+    }
+    
+    .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+    .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+    .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label,
+    .mdl-selectfield--floating-label.is-focused .mdl-selectfield__label,
+    .mdl-selectfield--floating-label.is-dirty .mdl-selectfield__label {
+        color: #EfA752;
+    }
+    
+    .ui-datepicker-inline {
+        margin: 0 auto;
+    }
+    
+    .ui-widget-header {
+        border: none;
+        background: none;
+    }
+    
+    .ui-widget-content {
+        border: none;
+    }
+    
+    .ui-datepicker td span,
+    .ui-datepicker td a {
+        text-align: center;
+    }
+    
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+        border: none;
+        color: #fff;
+        background: #3A9BF4;
+    }
+    
+    .ui-state-disabled span,
+    .ui-widget-content .ui-state-disabled span,
+    .ui-widget-header .ui-state-disabled span {
+        background: #fff;
+        color: #2E3D4B;
+    }
+    
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        border: none;
+        background: #3A9BF4;
+        color: #fff;
+    }
+</style>
+
+<div class="modal fade" id="appointment" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Бронювання уроку</h4>
+                <div class="appointment-hdr-back"><i class="fa fa-chevron-left"></i></div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="appointment-form">
+                    <input type="hidden" id="app_type" name="appointment-type" value="2">
+                    <input type="hidden" id="appointment-teacher" name="appointment-teacher" value="">
+                    <input type="hidden" id="appointment-teacher-name" name="appointment-teacher-name" value="">
+                    <input type="hidden" id="appointment-teacher-lastname" name="appointment-teacher-lastname" value="">
+                    <div class="appointment-part-1">
+                        <div id="appointment-date-wrapper" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label appointment-input">
+                            <h5 style="text-align:center;">Выберите дату</h5>
+                            <div id="appointment-date"></div>
+                        </div>
+                        <div class="appointment-slot">
+                            <h5 style="text-align:center;">Выберите время</h5>
+                        </div>
+                        <div class="appointment-button">
+                            <button id="appointment-continue" class="blue_button" style="margin: 0 auto;" disabled>Далее</button>
+                        </div>
+                    </div>
+                    <div class="appointment-loading">
+                        <div class="appointment-loading-gif"></div>
+                    </div>
+                    <div class="appointment-part-2">
+                        <div class="appointment-enterd-value"></div>
+                        <div class="appointment-button">
+                            <button id="appointment-submit" class="blue_button" style="margin: 0 auto;">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="appointment-success">
+                        <p class="appointment-success-descr paragraph-medium">
+                            Вы забронировали пробный урок на <span id="appointment-success-date"></span>, <span id="appointment-success-time"></span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
