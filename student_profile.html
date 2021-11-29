@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="ru_RU" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=550"> -->
+    <title>Studyup - онлайн образование</title>
+    <meta content="Studyup - онлайн образование" name="keywords">
+    <meta content="Studyup - онлайн образование" name="description">
+
+    <link rel="stylesheet" type="text/css" href="/skins/src/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/skins/src/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/src/css/_styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="/src/scss/_styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        var lang = 'ru';
+        var lang_values = {
+            PleaseEnterTrueEmail: 'Пожалуйста введите правильный адрес электронной почты',
+            Error: 'Ошибка',
+            setActive: '',
+            EmailExists: 'Данный адрес уже подписан на рассылку',
+            SuccessSubscribe: 'Ваш адрес успешно подписан на рассылку новостей',
+            ThankYou: 'Спасибо!',
+            PleaseFillFormData: 'Пожалуйста заполните все поля формы',
+            WeContactSoon: 'Мы свяжемся с вами в ближайшее время',
+            PleaseFillAllData: 'Пожалуйста заполните все данные',
+            ManagersContactYouSoon: 'Наши менеджеры свяжутся с вами в ближайшее время',
+            PleaseEnterYourEmail: 'Укажите Ваш e-mail',
+            RestorePassword: 'Восстановление пароля',
+            SendPassword: 'Выслать пароль',
+            PleaseFillFields: 'Пожалуйста заполните поля',
+            UserNotFound: 'Логин или пароль не верны',
+            PasswordWasSixSymbols: 'Пароль должен быть не менее 6 символов',
+            EmailUseAnotherUser: 'Данный e-mail адрес уже используется другим пользователем',
+            YourDataSave: 'Ваши данные успешно сохранены',
+            ThisEmail: 'E-mail адрес ',
+            NotInDatabase: ' в базе не найден',
+            LetterWithInstructionSend: 'Письмо с инструкциями отправлено на адрес',
+            CheckContractOfert: 'Вы должны принять публичный договор оферты',
+            PasswordDontMatch: 'Введенные пароли не совпадают',
+            OldPasswordWasNotCorrect: 'Старый пароль не верный',
+            PleaseEnterLogin: 'Пожалуйста введите логин',
+            PleaseEnterPhone: 'Пожалуйста введите телефон',
+            RefNotInBase: 'Такого реферала не существует',
+            Code2FA: '',
+            PleaseEnterYourCodeFa: '',
+            CodeSMS: '',
+            PleaseEnterYourCodeSMS: '',
+            no_verify_accounts: '',
+            wrong_codefa: '',
+            output_request_email: '',
+            success_payments_accounts: '',
+            refill_all_payments: '',
+            payment_account_not_unique: '',
+            confirm_payments_accounts_email: '',
+            EnterSite: '',
+            AccountBlocked: '',
+            AllRefundExplain: '',
+            BlockCabinets: '',
+            ErrorGoogleCode: '',
+            WrongCodeFA: '',
+            WrongCodeSMS: '',
+            output_min_summ: 'Минимальная сумма для вывода на карты $5, на платежные системы $1',
+            ThanksForSubscription: ''
+        }
+    </script>
+    <link rel="stylesheet" href="/source/css/messi.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="aside">
+            <ul>
+                <li>
+                    <div class="burger">
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                    </div>
+                    <div class="logo">
+                        <a href="/">
+                            <img src="/skins/src/img/logo_large.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="header_left_holder d-block d-md-none">
+                    <a href="">
+                        <div class="balance_holder">
+                            <svg width="32" height="32"><use xlink:href="/skins/src/img/aside/icons.svg#header_wallet"></use></svg>
+                            <div class="balnce_stats">
+                                <span>
+									Баланс
+								</span> 0.00 грн
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="header_left_holder d-flex flex-direction-row d-md-none">
+                    <div class="letter">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle justify-content-center" href="#" role="button" id="dropdownLetter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="num">0</span>
+                                <svg width="22" height="18"><use xlink:href="/skins/src/img/aside/icons.svg#letter"></use></svg>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right drop_long drop_letters" aria-labelledby="dropdownLetter">
+                                <h3>
+                                    Сообщения
+                                </h3>
+                                <div class="drop_letter_holder">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="bell">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle justify-content-center" href="#" role="button" id="dropdownBell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="num">0</span>
+                                <svg width="21" height="21"><use xlink:href="/skins/src/img/aside/icons.svg#bell"></use></svg>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right drop_long drop_bell" aria-labelledby="dropdowBell">
+                                <h3>
+                                    Уведомления
+                                </h3>
+                                <div class="drop_bell_holder">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/" title="Моё обучение">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#study"></use></svg>
+                        <span>Моё обучение</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/dialogs" title="Чат">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#chat"></use></svg>
+                        <span>Чат</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/teachers" title="Репетиторы">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#teacher"></use></svg>
+                        <span>Репетиторы</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/child" title="Дошкольникам">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#child"></use></svg>
+                        <span>Дошкольникам</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/homework" title="Домашняя работа">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#homework"></use></svg>
+                        <span>Домашняя работа</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/settings" title="Профиль">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#profile"></use></svg>
+                        <span>Профиль</span>
+                    </a>
+                </li>
+                <li class="aside_li active">
+                    <a class="aside_link" href="/ru/profile/help" title="Чаво">
+                        <svg width="30" height="30"><use xlink:href="/skins/src/img/aside/icons.svg#help"></use></svg>
+                        <span>Чаво</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="aside_bg"></div>
+        </aside>
+        <div class="right_side">
+            <header>
+                <div class="header_holder">
+                    <div class="logo_holder">
+                        <a href="/">
+                            <img src="/skins/study/images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="burger d-block d-md-none">
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                        <div class="burger_line"></div>
+                    </div>
+                    <div class="header_left_holder">
+                        <ul>
+                            <!-- IF Кабина Препода Старт -->
+                            <li class="d-none d-md-block">
+                                <a href="">
+                                    <div class="balance_holder">
+                                        <svg width="32" height="32"><use xlink:href="/skins/src/img/aside/icons.svg#header_wallet"></use></svg>
+                                        <div class="balnce_stats">
+                                            <span>
+												Баланс
+											</span> 0.00 грн
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- IF Кабина Препода Энд -->
+                            <li class="d-none d-md-block">
+                                <div class="letter">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownLetter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="num">0</span>
+                                            <svg width="22" height="18"><use xlink:href="/skins/src/img/aside/icons.svg#letter"></use></svg>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right drop_long drop_letters" aria-labelledby="dropdownLetter">
+                                            <h3>
+                                                Сообщения
+                                            </h3>
+                                            <div class="drop_letter_holder">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="d-none d-md-block">
+                                <div class="bell">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownBell" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="num">0</span>
+                                            <svg width="21" height="21"><use xlink:href="/skins/src/img/aside/icons.svg#bell"></use></svg>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right drop_long drop_bell" aria-labelledby="dropdowBell">
+                                            <h3>
+                                                Уведомления
+                                            </h3>
+                                            <div class="drop_bell_holder">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="human">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuHuman" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="/source/images/empty-avatar.jpg" class="avatar">
+                                            <span>
+												DMYTRO 
+											</span>
+                                            <img src="/skins/src/img/header_down_arrow.png" alt="">
+                                        </a>
+                                        <div class="dropdown-menu drop_short dropdown-menu-right" aria-labelledby="dropdownMenuHuman">
+                                            <div class="langs_holder">
+                                                <div class="active_lang">
+                                                    <img src="/skins/src/img/cif_ua.png" alt="">
+                                                    <a href="/ua/">UA</a>
+                                                </div>
+                                                <div>
+                                                    <img src="/skins/src/img/cif_ru.png" alt="">
+                                                    <a href="/ru/">RU</a>
+                                                </div>
+                                                <div>
+                                                    <img src="/skins/src/img/cif_us.png" alt="">
+                                                    <a href="/en/">EN</a>
+                                                </div>
+                                            </div>
+                                            <div class="logout">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.875 10.125V11.6875C9.875 12.1019 9.71038 12.4993 9.41735 12.7924C9.12433 13.0854 8.7269 13.25 8.3125 13.25H2.0625C1.6481 13.25 1.25067 13.0854 0.957646 12.7924C0.66462 12.4993 0.5 12.1019 0.5 11.6875V2.3125C0.5 1.8981 0.66462 1.50067 0.957646 1.20765C1.25067 0.91462 1.6481 0.75 2.0625 0.75H8C8.86289 0.75 9.875 1.44961 9.875 2.3125V3.875" stroke="#2E3D4B" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.375 10.125L15.5 7L12.375 3.875" stroke="#2E3D4B" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.875 7H14.875" stroke="#2E3D4B" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                                <a href="/user/logout/">Выход</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <style>
+                .box-book {
+                    display: none;
+                }
+            </style>
+
+<div class="content-wrapper teachers">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>Каталог специалистов</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="teachers-search-holder">
+                <div class="col-12 col-lg-10 form-holders">
+
+                    <form action="/ru/profile/teachers/" method="get">
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+                                <option value="">Репетитор</option>
+                                    <option value="">Дошкольникам</option>
+                                    <option value="">Помощь с д/з</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Предмет</option>
+                                <option value="">2</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Класс</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                              
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Страна</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        
+                                                    <div class="form-item">                        
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Язык преподавателя</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>      
+                        
+                        
+                    <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Длительность урока</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+						</select>
+                    </div>
+
+
+                    <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects" class="selected">
+							<option value="">50 грн. - 1100 грн.</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма для дошкольников -->
+
+        <div class="row">
+            <div class="preschoolers-search-holder">
+                <div class="col-12 col-lg-10 form-holders">
+                    <form action="#" method="get">
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects" class="active-preschoolers">
+                                <option value="">Дошкольникам</option>
+                                    <option value="">Репетитор</option>
+                                    <option value="">Помощь с д/з</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Предмет</option>
+                                <option value="">2</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Класс</option>
+                                <option value="">5</option>
+                                <option value="">2231</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                              
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Страна</option>
+                                <option value="">3</option>
+                                <option value="">2</option>
+                                <option value="">1</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-item">                        
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Язык преподавания</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>      
+
+                        <div class="form-item">                        
+                            <select name="teachers_subjects" id="teachers_subjects">
+                                <option value="">Длительность урока</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </div>  
+
+                            <div class="form-item">                        
+                                <select name="teachers_subjects" id="teachers_subjects">
+                                    <option value="">Цена</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>  
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма Помощь с ДЗ -->
+
+        <div class="row">
+            <div class="homework-search-holder">
+                <div class="col-12 col-lg-10 form-holders">
+
+                    <form action="#" method="get">
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects" class="active-homework">
+                                <option value="">Помощь с д/з</option>
+                                    <option value="">Репетитор</option>
+                                    <option value="">Дошкольникам</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Специалист</option>
+                                <option value="">2</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Длительность урока</option>
+                                <option value="">5</option>
+                                <option value="">2231</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                              
+                        <div class="form-item">
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Язык преподавания</option>
+                                <option value="">3</option>
+                                <option value="">2</option>
+                                <option value="">1</option>
+                            </select>
+                        </div>
+                        
+                                                    <div class="form-item">                        
+                        <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Цена</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>      
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/empty-avatar.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>    
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span>  Алгебра, геометрия, физика, 
+                                        химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык  <span class="answer">Родной язык</span>; 
+                                        Украинский язык  <span class="answer">Родной язык</span>; Немецкий  <span class="answer">A1</span>; Английский  <span class="answer">A1</span>; 
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+
+                                    <!-- Скрытые кнопки нет купленных уроков и куплено столько-то уроков -->
+                                    <button class="btn-lessons no-lessons" style="display: none;">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons" style="display: none;">Куплено: 99 уроков</button>
+
+                                    <!-- Активная кнопка доступного пробного урока -->
+                                    <button class="btn-lessons trial-lesson">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/avatar.png">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>     
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span>  Алгебра, геометрия, физика, 
+                                        химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык  <span class="answer">Родной язык</span>; 
+                                        Украинский язык  <span class="answer">Родной язык</span>; Немецкий  <span class="answer">A1</span>; Английский  <span class="answer">A1</span>; 
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+
+                                    <!-- Скрытые кнопки нет купленных уроков и куплено столько-то уроков -->
+                                    <button class="btn-lessons no-lessons">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons" style="display: none;">Куплено: 99 уроков</button>
+                                    <button class="btn-lessons trial-lesson" style="display: none;">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/user-avatar.png">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>     
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span>  Алгебра, геометрия, физика, 
+                                        химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык  <span class="answer">Родной язык</span>; 
+                                        Украинский язык  <span class="answer">Родной язык</span>; Немецкий  <span class="answer">A1</span>; Английский  <span class="answer">A1</span>; 
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <button class="btn-lessons no-lessons" style="display: none;">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons">Куплено: 99 уроков</button>
+                                    <button class="btn-lessons trial-lesson" style="display: none;">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/avatar.png">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>     
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span>  Алгебра, геометрия, физика, 
+                                        химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык  <span class="answer">Родной язык</span>; 
+                                        Украинский язык  <span class="answer">Родной язык</span>; Немецкий  <span class="answer">A1</span>; Английский  <span class="answer">A1</span>; 
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <button class="btn-lessons no-lessons" style="display: none;">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons">Куплено: 99 уроков</button>
+                                    <button class="btn-lessons trial-lesson" style="display: none;">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="d-none">
+    footer
+</footer>
+</div>
+
+<script src="/skins/src/js/jquery-3.6.0.min.js"></script>
+<script src="/skins/src/js/bootstrap.bundle.js"></script>
+
+<script>
+    // aside
+    $('.burger').on('click', function() {
+        $('.aside').toggleClass('open');
+    });
+    $('.aside_bg').on('click', function() {
+        $('.aside.open').removeClass('open');
+    });
+
+    // teacher profile разрешение на редактирование textarea
+    $('.teacher_skill .teacher_skill_about .edit').on('click', function() {
+        a = $('.teacher_about_text').attr('disabled');
+        if (a == 'disabled') {
+            $('.teacher_about_text').prop("disabled", false);
+        } else {
+            $('.teacher_about_text').prop("disabled", true);
+        }
+    });
+</script>
+
+
+<script>
+    // pupil profile select tabs
+    $(".pupil_profile .category_tab").click(function() {
+        $(".pupil_profile .category_tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".category_tab_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil profile select tabs
+    $(".video_right_now_finished_tabs").click(function() {
+        $(".video_right_now_finished_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .video_right_now_finished_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil reprtitors select tabs
+    $(".rep_plan_cancel_over_tabs").click(function() {
+        $(".rep_plan_cancel_over_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .rep_plan_cancel_over_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil homework select tabs
+    $(".hw_plan_cancel_over_tabs").click(function() {
+        $(".hw_plan_cancel_over_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .hw_plan_cancel_over_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil before school select tabs
+    $(".before_plan_cancel_over_tabs").click(function() {
+        $(".before_plan_cancel_over_tabs").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_profile .before_plan_cancel_over_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+
+    // pupil lessons select tabs
+    $(".pupil_lessons .lessons_ul_item_tab").click(function() {
+        $(".pupil_lessons .lessons_ul_item_tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".pupil_lessons .lessons_ul_item_cont").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+</script>
+<script src="/skins/study/js/app_teachers.js?ver=1637902114"></script>
+<link href="https://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet">
+<script>
+    $(function() {
+        $('#teachers_subjects').change(function() {
+            $(this).parent().submit();
+        });
+        $('.teachers_holder').mouseover(function() {
+            $('.box-book').hide();
+            $(this).parent().parent().find('.box-book').show();
+        });
+    });
+</script>
+<style>
+    /* Appointment Pop Up */
+    
+    .box-book {
+        background: #FFFFFF;
+        box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .box-book p {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+        color: #A4A4A4;
+    }
+    
+    .box-book p span.price {
+        font-weight: bold;
+        color: #2E3D4B;
+    }
+    
+    .box-book a.blue_button {
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .box-book a.white_border_btn {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 12px 19px;
+        color: #2E3D4B;
+        border: 1px solid #3A9BF4;
+        box-sizing: border-box;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    
+    .box-book .box-book__content {
+        padding: 20px;
+    }
+    
+    .appointment-hdr-back {
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+    }
+    
+    .appointment-hdr-back .fa {
+        vertical-align: middle;
+        font-size: 16px;
+        color: #555;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .appointment-form {
+        padding: 0 2%;
+        text-align: center;
+    }
+    
+    .appointment-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .appointment-input input {
+        font-family: "Montserrat", sans-serif;
+        padding: 6px;
+        font-size: 14px;
+    }
+    
+    .appointment-input select {
+        font-size: 14px;
+    }
+    
+    .appointment-input label {
+        font-family: "Montserrat", sans-serif;
+        color: #777;
+    }
+    
+    .appointment-input label em {
+        color: #cc5151;
+    }
+    
+    .appointment-button {
+        margin: 20px auto 0 auto;
+    }
+    
+    #appointment-continue {
+        visibility: hidden;
+    }
+    
+    .appointment-part-1 {
+        position: relative;
+    }
+    
+    .appointment-part-2 {
+        display: none;
+    }
+    
+    #appointment-doctor-wrapper {
+        display: block;
+    }
+    
+    .appointment-slot {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .appointment-slot>p {
+        text-align: left;
+        color: #EfA752;
+        font-size: 12px;
+        padding: 0 0 10px 0;
+        display: none;
+    }
+    
+    .appointment-slot>div {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px 5px 5px 5px;
+    }
+    
+    .appointment-slot>div input {
+        display: inline-block;
+        position: absolute;
+        width: 1%;
+        visibility: hidden;
+    }
+    
+    .appointment-slot>div input:disabled+label {
+        color: #FFF;
+        background: #cc5151;
+        border: 1px solid #cc5151;
+        cursor: not-allowed;
+    }
+    
+    .appointment-slot>div input:checked+label {
+        background: #d8ebfd;
+        border-radius: 5px;
+    }
+    
+    .appointment-slot>div label {
+        width: 45px;
+        padding: 5px;
+        cursor: pointer;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #3A9BF4;
+    }
+    
+    .appointment-slot>div label:hover {
+        background: #d8ebfd;
+        border-radius: 5px;
+    }
+    
+    #appointment-no-slot {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    .appointment-enterd-value {
+        width: 100%;
+        background: #f4f4f4;
+        padding: 10px;
+        margin: 0 auto 10px auto;
+        border-radius: 2px;
+    }
+    
+    .appointment-enterd-value>div {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        text-align: left;
+    }
+    
+    .appointment-enterd-value>div p {
+        display: inline-block;
+        vertical-align: middle;
+        width: 85%;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
+        color: #333;
+        margin: 0;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .appointment-enterd-value>div .fa {
+        vertical-align: middle;
+        width: 15%;
+        height: 24px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #EfA752;
+        padding: 0 5px 0 0;
+    }
+    
+    .appointment-loading {
+        padding: 30px 0;
+        display: none;
+    }
+    
+    .appointment-loading-gif {
+        width: 200px;
+        height: 150px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        background-image: url(../images/loader.gif);
+    }
+    
+    .appointment-success {
+        display: none;
+        padding: 0 20px;
+        text-align: center;
+    }
+    
+    .appointment-success span {
+        display: inline-block;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .appointment-success p {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+    }
+    
+    .appointment-mail-icon {
+        padding: 20px 0;
+    }
+    
+    .appointment-mail-icon .fa {
+        font-size: 64px;
+        color: #8BC34A;
+    }
+    
+    #appointment-date-wrapper {
+        display: none;
+    }
+    
+    #appointment-no-slot {
+        padding: 0 20px;
+    }
+    
+    .or-label {
+        position: relative;
+        width: 50%;
+        margin: 30px auto;
+        height: 2px;
+        background: #CCC;
+    }
+    
+    .or-label::after {
+        content: 'ИЛИ';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -15px;
+        width: 60px;
+        font-size: 16px;
+        color: #EfA752;
+        background: #FFF;
+        padding: 5px 10px;
+    }
+    
+    #search-doctor {
+        position: relative;
+    }
+    
+    #search-doctor ul {
+        display: none;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        text-align: left;
+        padding: 10px;
+        border: 1px solid #DDD;
+        border-top: 0;
+        background: #EEE;
+    }
+    
+    #search-doctor ul li {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        color: #333;
+        padding: 5px;
+    }
+    
+    .appointment-option {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 111;
+    }
+    
+    .appointment-option>div .fa {
+        width: 42px;
+        height: 42px;
+        line-height: 39px;
+        text-align: center;
+        font-size: 24px;
+        color: #FFF;
+        background: #EfA752;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    
+    .appointment-option>div .fa:hover {
+        color: #333;
+    }
+    
+    .appointment-option .appointment-option-department {
+        display: none;
+    }
+    
+    .appointment-option .appointment-option-doctor {
+        display: none;
+    }
+    
+    .mdl-button,
+    .mdl-textfield__input {
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .mdl-textfield__label::after,
+    .mdl-selectfield__label::after {
+        background-color: #EfA752;
+    }
+    
+    .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+    .mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+    .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label,
+    .mdl-selectfield--floating-label.is-focused .mdl-selectfield__label,
+    .mdl-selectfield--floating-label.is-dirty .mdl-selectfield__label {
+        color: #EfA752;
+    }
+    
+    .ui-datepicker-inline {
+        margin: 0 auto;
+    }
+    
+    .ui-widget-header {
+        border: none;
+        background: none;
+    }
+    
+    .ui-widget-content {
+        border: none;
+    }
+    
+    .ui-datepicker td span,
+    .ui-datepicker td a {
+        text-align: center;
+    }
+    
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+        border: none;
+        color: #fff;
+        background: #3A9BF4;
+    }
+    
+    .ui-state-disabled span,
+    .ui-widget-content .ui-state-disabled span,
+    .ui-widget-header .ui-state-disabled span {
+        background: #fff;
+        color: #2E3D4B;
+    }
+    
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        border: none;
+        background: #3A9BF4;
+        color: #fff;
+    }
+</style>
+
+<div class="modal fade" id="appointment" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Бронювання уроку</h4>
+                <div class="appointment-hdr-back"><i class="fa fa-chevron-left"></i></div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="appointment-form">
+                    <input type="hidden" id="app_type" name="appointment-type" value="2">
+                    <input type="hidden" id="appointment-teacher" name="appointment-teacher" value="">
+                    <input type="hidden" id="appointment-teacher-name" name="appointment-teacher-name" value="">
+                    <input type="hidden" id="appointment-teacher-lastname" name="appointment-teacher-lastname" value="">
+                    <div class="appointment-part-1">
+                        <div id="appointment-date-wrapper" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label appointment-input">
+                            <h5 style="text-align:center;">Выберите дату</h5>
+                            <div id="appointment-date"></div>
+                        </div>
+                        <div class="appointment-slot">
+                            <h5 style="text-align:center;">Выберите время</h5>
+                        </div>
+                        <div class="appointment-button">
+                            <button id="appointment-continue" class="blue_button" style="margin: 0 auto;" disabled>Далее</button>
+                        </div>
+                    </div>
+                    <div class="appointment-loading">
+                        <div class="appointment-loading-gif"></div>
+                    </div>
+                    <div class="appointment-part-2">
+                        <div class="appointment-enterd-value"></div>
+                        <div class="appointment-button">
+                            <button id="appointment-submit" class="blue_button" style="margin: 0 auto;">Забронировать</button>
+                        </div>
+                    </div>
+                    <div class="appointment-success">
+                        <p class="appointment-success-descr paragraph-medium">
+                            Вы забронировали пробный урок на <span id="appointment-success-date"></span>, <span id="appointment-success-time"></span>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
