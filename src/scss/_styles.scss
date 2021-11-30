@@ -1098,10 +1098,190 @@ a.teachers-more {
     }
 }
 
+.student-profile-info {
+    min-height: 500px;
+}
+
+.students-journal {
+    text-align: center;
+    max-width: 477px;
+    margin: 0 auto;
+    padding-top: 150px;
+    p {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #3A9BF4;
+        opacity: 0.2;
+        max-width: 284px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    img {
+        max-width: 102px;
+        width: 100%;
+    }
+}
+
+.history-list {
+    background-color: rgba(58, 155, 244, 0.05);
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    margin-top: 20px;
+    h1 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 146.1%;
+        color: #2E3D4B;
+    }
+}
+
+.history-item {
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #EAEFF9;
+    max-height: 22px;
+    margin-top: 15px;
+}
+
+.hitem-name {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    p {
+        font-size: 14px;
+        line-height: 146.1%;
+        color: #2E3D4B;
+    }
+    span {
+        font-size: 10px;
+        line-height: 146.1%;
+        color: #98A4AF;
+        padding: 3px 0 0 10px;
+    }
+    a {
+        font-size: 14px;
+        margin-top: -1px;
+        margin-left: 4px;
+    }
+}
+
+.hitem {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    p {
+        font-size: 14px;
+        line-height: 146.1%;
+        color: #2E3D4B;
+    }
+    a {
+        font-size: 14px;
+        margin-top: -1px;
+        margin-left: 4px;
+    }
+    .tr {
+        display: flex;
+        flex-direction: row;
+    }
+    .td {
+        font-size: 10px;
+        line-height: 146.1%;
+        color: #98A4AF;
+        padding: 3px 0 0 10px;
+    }
+}
+
+
+
+.hitem-cost,
+.hitem-date {
+    font-size: 14px;
+    line-height: 146.1%;
+    color: #98A4AF;
+    text-align: right;
+    padding: 0;
+}
+
+.hbtn {
+    margin-top: 20px;
+    background: none;
+    color: $primary-color;
+  
+    input {
+        display: none;
+    }
+      label {
+        max-width: 130px;
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: transform .3s;
+        cursor: pointer;
+        img {
+            transition: transform .3s;
+            margin-left: 5px;
+        }
+      }
+      input:checked + label img {
+        transform: rotate(180deg);
+      }
+}
+
+.card-body {
+    padding: 0 0 1.25rem 0;
+}
+
+.md-change-pass {
+    max-width: 370px;
+    margin: 0 auto;
+    padding: 0;
+    .modal-body {
+        margin-top: -30px;
+    }
+    input {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .md-modal-footer button {
+        width: 100%;
+        margin-top: -10px;
+    }
+}
+
+.md-pass-succes { 
+    .modal-body{
+        margin: -10px 0 0px 0;
+        text-align: center;
+        p {
+            font-size: 14px;
+            line-height: 146.1%;
+            color: #2E3D4B;
+        }
+    }   
+    .modal-footer {
+        border: none;
+        margin-bottom: 10px;
+    } 
+    
+    button {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+}
+
+
+
 @media (max-width: 1250px) {
     .soon-lessons button {
         max-width: 40px;
         max-height: 40px;
+    }
+    .hitem-name a {
+        font-size: 12px;
+        margin-top: 2px;
     }
 }
 
@@ -1137,6 +1317,10 @@ a.teachers-more {
         max-width: 42px;
         max-height: 42px;
     }
+    .hitem-cost,
+.hitem-date {
+    font-size: 12px;
+}
 }
 
 @media (max-width: 992px) {
@@ -1170,6 +1354,10 @@ a.teachers-more {
     .lesson-duration {
         font-size: 12px;
         // font-size: calc(0.600rem + 0.4vw);
+    }
+    .students-journal p {
+        font-size: 16px;
+        max-width: 257px;
     }
 }
 
@@ -1465,5 +1653,45 @@ a.teachers-more {
     }
     .into-modal-button {
         margin-top: 45px;
+    }
+    .students-journal {
+        p {
+        font-size: 14px;
+        max-width: 237px;
+        }
+        img {
+            max-width: 87px;
+        }
+    }
+    .history-item {
+        max-height: unset;
+        margin-top: 20px;
+    }
+    .history-list h1 {
+        font-size: 14px;
+    }
+    .hitem-cost,
+.hitem-date {
+    text-align: left;
+    margin-top: -10px;
+}
+.hitem-name {
+    a {
+        font-size: 14px;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+    }
+    .history-list {
+        text-align: center;
+    }
+    .hitem{
+        flex-direction: column;
+        padding-bottom: 20px;
+        .td {
+            text-align: left;
+            padding: 0;
+            margin-top: -10px;
+        }
     }
 }
