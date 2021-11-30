@@ -1,5 +1,4 @@
 $primary-color: #3a9bf4;
-
 .teachers {
     margin-bottom: 100px;
 }
@@ -61,7 +60,7 @@ $primary-color: #3a9bf4;
     background-color: #3a9bf4;
     color: white;
     outline: none !important;
-    text-align: center;
+    // text-align: center;
     transition: 1s;
 }
 
@@ -79,13 +78,13 @@ $primary-color: #3a9bf4;
 .active-preschoolers {
     background-color: #b54fd9;
     color: white !important;
-    text-align: center;
+    // text-align: center;
 }
 
 .active-homework {
     background-color: #ec9c3e;
     color: white !important;
-    text-align: center;
+    // text-align: center;
 }
 
 .teachers-holder {
@@ -94,11 +93,9 @@ $primary-color: #3a9bf4;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 30px;
-
     .teachers-ava {
         border-radius: 5px;
     }
-
     .teachers-ava img {
         border-radius: 5px;
         width: 100%;
@@ -119,7 +116,6 @@ $primary-color: #3a9bf4;
     display: flex;
     flex-direction: column;
     align-items: baseline;
-
     h2 {
         margin-bottom: 0;
     }
@@ -147,7 +143,6 @@ $primary-color: #3a9bf4;
     display: flex;
     flex-direction: row;
     align-items: baseline;
-
     h2 {
         margin-bottom: 0;
     }
@@ -389,11 +384,9 @@ a.teachers-more {
     box-sizing: border-box;
     border-radius: 5px;
     margin-bottom: 30px;
-
     .teachers-ava {
         border-radius: 5px;
     }
-
     .teachers-ava img {
         border-radius: 5px;
         width: 100%;
@@ -668,7 +661,6 @@ a.teachers-more {
 }
 
 // Student Cabinet
-
 .welcome-wrapper {
     background-color: rgba(58, 155, 244, 0.04);
     border-radius: 5px;
@@ -834,7 +826,6 @@ a.teachers-more {
     color: white;
 }
 
-
 .pl-teacher-info {
     display: flex;
     flex-direction: row;
@@ -934,7 +925,6 @@ a.teachers-more {
 }
 
 // Modal 
-
 .modal-dialog {
     max-width: 610px;
     width: 100%;
@@ -942,10 +932,10 @@ a.teachers-more {
 
 .md-modal-form {
     label {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 25px;
-    color: #2E3D4B;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        color: #2E3D4B;
     }
     input::placeholder {
         color: #98A4AF;
@@ -959,8 +949,6 @@ a.teachers-more {
     }
 }
 
-
-
 #mymodal-label {
     margin: 0 auto;
     font-weight: bold;
@@ -969,16 +957,15 @@ a.teachers-more {
     font-size: 24px;
     line-height: 33px;
     color: #2E3D4B;
-    }
+}
 
-    .peak-teacher {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 33px;
-        color: #2E3D4B;
-        text-align: center;
-    }
-
+.peak-teacher {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    color: #2E3D4B;
+    text-align: center;
+}
 
 .modal-row {
     width: 100%;
@@ -1012,7 +999,7 @@ a.teachers-more {
     display: flex;
     flex-direction: row;
     p {
-    color: #98A4AF;
+        color: #98A4AF;
     }
     span {
         margin-left: 5px;
@@ -1068,14 +1055,14 @@ a.teachers-more {
 }
 
 .into-modal-button {
-    border: none;  
+    border: none;
     background: none;
-    :hover {
+     :hover {
         background: #bdbdbd;
         border-radius: 3px;
     }
-    :active,
-    :focus {
+     :active,
+     :focus {
         border-radius: 3px;
     }
     img {
@@ -1086,8 +1073,8 @@ a.teachers-more {
 }
 
 .peak-teacher-dropdown {
-        width: 100%;
-        outline: 0;
+    width: 100%;
+    outline: 0;
     button {
         border: 1px solid #000;
         border-radius: 5px;
@@ -1110,7 +1097,6 @@ a.teachers-more {
         border-color: $primary-color;
     }
 }
-
 
 @media (max-width: 1250px) {
     .soon-lessons button {
@@ -1137,7 +1123,6 @@ a.teachers-more {
         max-width: unset;
         margin-left: 0;
     }
-
     .feedback-holder {
         margin-left: 0;
     }
@@ -1167,12 +1152,10 @@ a.teachers-more {
         width: 100%;
         font-size: 20px;
     }
-
     .btn-holder {
         max-width: unset;
         font-size: 20px;
     }
-
     .teacher-btn-holder button {
         margin-top: 12px;
         margin-bottom: 12px;
@@ -1195,7 +1178,7 @@ a.teachers-more {
         display: flex;
         flex-direction: column;
         align-items: center;
-        p{
+        p {
             margin-bottom: 0;
         }
         span {
@@ -1228,7 +1211,6 @@ a.teachers-more {
         font-size: 14px;
         padding: 6px;
     }
-    
     .modal-dialog {
         max-width: auto;
         width: auto;
@@ -1257,7 +1239,7 @@ a.teachers-more {
         .teacher-amount {
             margin-top: 1px;
             font-size: 12px;
-        } 
+        }
     }
     .teacher-service {
         p {
@@ -1282,7 +1264,6 @@ a.teachers-more {
     .form-item {
         max-width: 155px;
     }
-
     .teachers-search-holder select,
     .preschoolers-search-holder select,
     .homework-search-holder select {
@@ -1291,13 +1272,11 @@ a.teachers-more {
         max-width: 120px;
         font-size: 11px;
     }
-    
     .teacher-pr-tbs {
-        a { 
-            font-size: 10px;    
-           }
+        a {
+            font-size: 10px;
+        }
     }
-
     .empty-tab-wrapper {
         margin-top: 20px;
         p {
@@ -1316,8 +1295,7 @@ a.teachers-more {
             font-size: 14px;
         }
     }
-
-    .rating { 
+    .rating {
         .stars {
             margin: -1px 2px 0 10px;
         }
@@ -1326,11 +1304,9 @@ a.teachers-more {
             margin: 2px 0 0 12px;
         }
     }
-
     .rating {
         margin-bottom: -30px;
     }
-
     .feedback-holder {
         margin-left: -15px;
         h1 {
@@ -1359,12 +1335,9 @@ a.teachers-more {
     .teacher-btn-holder button {
         font-size: 14px;
     }
-
-
     .cabinet-tab-holder {
         min-height: 300px;
     }
-
     .welcome-holder {
         display: flex;
         flex-direction: row;
@@ -1374,13 +1347,11 @@ a.teachers-more {
             line-height: 38px;
         }
     }
-
     .welcome-text {
         p {
             font-size: 14px;
         }
     }
-
     .lesson-holder {
         h1 {
             font-size: 14px;
@@ -1405,7 +1376,6 @@ a.teachers-more {
     .cabinet-tab-holder {
         margin: 45px 20px 40px 20px;
     }
-
     .pl-teacher {
         p {
             font-size: 12px;
@@ -1457,7 +1427,6 @@ a.teachers-more {
             font-size: 12px;
         }
     }
-
     #plan-lesson,
     #pl-buy-lesson {
         max-width: 300px;
@@ -1480,7 +1449,7 @@ a.teachers-more {
             font-size: 14px;
             line-height: 25px;
         }
-        ::placeholder {
+         ::placeholder {
             font-size: 12px;
         }
         input {

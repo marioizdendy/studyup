@@ -4,81 +4,439 @@
 <div class="content-wrapper teachers">
     <div class="container-fluid">
         <div class="row">
-            <div class="teachers_search_holder">
-                <div class="col-12">
+            <div class="col-12">
+                <h1>Каталог специалистов</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="teachers-search-holder">
+                <div class="col-12 col-lg-10 form-holders">
+
                     <form action="/ru/profile/teachers/" method="get">
-                        <select name="teachers_subjects" id="teachers_subjects">
-							<option value="">Выберите предмет</option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-														<option value=""></option>
-													</select>
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+                                <option value="">Репетитор</option>
+                                    <option value="">Дошкольникам</option>
+                                    <option value="">Помощь с д/з</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Предмет</option>
+                                <option value="">2</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Класс</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Страна</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Язык преподавателя</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Длительность урока</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+						</select>
+                        </div>
+
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects" class="selected">
+							<option value="">50 грн. - 1100 грн.</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                        </div>
+
                     </form>
                 </div>
             </div>
         </div>
+
+        <!-- Форма для дошкольников -->
+
+        <div class="row">
+            <div class="preschoolers-search-holder">
+                <div class="col-12 col-lg-10 form-holders">
+                    <form action="#" method="get">
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects" class="active-preschoolers">
+                                <option value="">Дошкольникам</option>
+                                    <option value="">Репетитор</option>
+                                    <option value="">Помощь с д/з</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Предмет</option>
+                                <option value="">2</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Класс</option>
+                                <option value="">5</option>
+                                <option value="">2231</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Страна</option>
+                                <option value="">3</option>
+                                <option value="">2</option>
+                                <option value="">1</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Язык преподавания</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+                                <option value="">Длительность урока</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+                                    <option value="">Цена</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма Помощь с ДЗ -->
+
+        <div class="row">
+            <div class="homework-search-holder">
+                <div class="col-12 col-lg-10 form-holders">
+
+                    <form action="#" method="get">
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects" class="active-homework">
+                                <option value="">Помощь с д/з</option>
+                                    <option value="">Репетитор</option>
+                                    <option value="">Дошкольникам</option>
+                                </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Специалист</option>
+                                <option value="">2</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Длительность урока</option>
+                                <option value="">5</option>
+                                <option value="">2231</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Язык преподавания</option>
+                                <option value="">3</option>
+                                <option value="">2</option>
+                                <option value="">1</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <select name="teachers_subjects" id="teachers_subjects">
+							<option value="">Цена</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-12">
-                <h1>Репетиторы</h1>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/empty-avatar.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span> Алгебра, геометрия, физика, химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык <span class="answer">Родной язык</span>; Украинский язык <span class="answer">Родной язык</span>; Немецкий <span class="answer">A1</span>; Английский <span class="answer">A1</span>;
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+
+                                    <!-- Скрытые кнопки нет купленных уроков и куплено столько-то уроков -->
+                                    <button class="btn-lessons no-lessons" style="display: none;">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons" style="display: none;">Куплено: 99 уроков</button>
+
+                                    <!-- Активная кнопка доступного пробного урока -->
+                                    <button class="btn-lessons trial-lesson">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="row">
                     <div class="col-12">
-                        <div class="teachers_holder">
+                        <div class="teachers-holder">
                             <div class="row">
-                                <div class="col-12 col-sm-5 col-md-4 col-lg-3">
-                                    <div class="teachers_ava">
-                                        <img src="/source/images/empty-avatar.jpg">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/avatar.png">
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-8 col-lg-9">
-                                    <div class="teachers_title">
-                                        <h2>
-                                            <a href="/ru/profile/teachers_info/14">DMYTRO VERBYTSKYI</a>
-                                        </h2>
-                                        <div class="stars">
-                                            ★ ★ ★ ☆ ☆
-
-                                            <span>
-												3
-											</span>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
                                         </div>
                                     </div>
-                                    <span class="d-block mb-4">Опыт 20</span>
-                                    <div class="teachers_lessons">
-                                        <span>Преподаёт:</span> Болгарский,
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
                                     </div>
-                                    <div class="teachers_langs">
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span> Алгебра, геометрия, физика, химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
                                         <span>
 											Владеет языком:
-										</span> Французкий <span class="answer">A2</span>;
+										</span> Русский язык <span class="answer">Родной язык</span>; Украинский язык <span class="answer">Родной язык</span>; Немецкий <span class="answer">A1</span>; Английский <span class="answer">A1</span>;
                                     </div>
-                                    <div class="teachers_about">
-                                        dasdas
+                                </div>
+                                <div class="col-12 col-lg-3">
+
+                                    <!-- Скрытые кнопки нет купленных уроков и куплено столько-то уроков -->
+                                    <button class="btn-lessons no-lessons">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons" style="display: none;">Куплено: 99 уроков</button>
+                                    <button class="btn-lessons trial-lesson" style="display: none;">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/user-avatar.png">
                                     </div>
-                                    <a href="/ru/profile/teachers_info/14" class="teachers_more">
-										Читать далее
-									</a>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span> Алгебра, геометрия, физика, химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык <span class="answer">Родной язык</span>; Украинский язык <span class="answer">Родной язык</span>; Немецкий <span class="answer">A1</span>; Английский <span class="answer">A1</span>;
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <button class="btn-lessons no-lessons" style="display: none;">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons">Куплено: 99 уроков</button>
+                                    <button class="btn-lessons trial-lesson" style="display: none;">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="teachers-holder">
+                            <div class="row">
+                                <div class="col-12 col-sm-5 col-md-3 col-lg-2">
+                                    <div class="teachers-ava">
+                                        <img src="/source/images/avatar.png">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <div class="teachers-profile-title">
+                                        <div class="teacher-profile-name">
+                                            <h2>
+                                                Нина Колокольцева
+                                            </h2>
+                                            <div class="stars-holder">
+                                                <div class="stars">
+                                                    ★ ★ ★ ☆ ☆
+                                                </div>
+                                                <div class="stars-count">3.0</div>
+                                            </div>
+                                        </div>
+                                        <div class="teachers-exp">
+                                            <p>Опыт 12 лет</p>
+                                            <span>350 уроков</span>
+                                        </div>
+                                    </div>
+                                    <div class="teacher-services">
+                                        <p class="current-students">Учеников сейчас: 15</p>
+                                        <p class="teacher-costs">Стоимость: <span class="tsc">200 грн</span></p>
+                                        <p class="lesson-duration">Урок: <span class="tsc">30 мин</span></p>
+                                    </div>
+                                    <div class="teachers-lessons">
+                                        <span>Преподаёт:</span> Алгебра, геометрия, физика, химия, немецкий язык, Английский язык, Украинский язык
+                                    </div>
+                                    <div class="teacher-langs">
+                                        <span>
+											Владеет языком:
+										</span> Русский язык <span class="answer">Родной язык</span>; Украинский язык <span class="answer">Родной язык</span>; Немецкий <span class="answer">A1</span>; Английский <span class="answer">A1</span>;
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-3">
+                                    <button class="btn-lessons no-lessons" style="display: none;">Нет купленных уроков</button>
+                                    <button class="btn-lessons available-lessons">Куплено: 99 уроков</button>
+                                    <button class="btn-lessons trial-lesson" style="display: none;">Доступен пробный урок</button>
+                                    <!-- Профиль учителя -->
+                                    <button class="teacher-btn">ПОДРОБНЕЕ</button>
                                 </div>
                             </div>
                         </div>

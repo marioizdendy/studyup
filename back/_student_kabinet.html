@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=550"> -->
     <title>Studyup - онлайн образование</title>
     <meta content="Studyup - онлайн образование" name="keywords">
     <meta content="Studyup - онлайн образование" name="description">
 
     <link rel="stylesheet" type="text/css" href="/skins/src/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/skins/src/css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/src/scss/_styles.css"> -->
-    <link rel="stylesheet" type="text/css" href="/skins/src/css/_styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/src/css/_styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="/src/scss/_styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
@@ -298,15 +297,15 @@
         <div class="row">
             <div class="col-12">
                 <div class="welcome-wrapper">
-                    <div class="welcome-text">
-                        <div class="welcome-holder">
-                            <h1>Привет, <span>Дмитрий</span></h1>
-                            <img src="/source/icons/hi.svg" alt="">
-                        </div>
-                        <p>Давай начнем обучение?</p>
-                        <p>Давай продолжим обучение?</p>
+                <div class="welcome-text">
+                    <div class="welcome-holder">
+                        <h1>Привет, <span>Дмитрий</span></h1>
+                    <img src="/source/icons/hi.svg" alt="">
                     </div>
+                    <p>Давай начнем обучение?</p>
+                    <p>Давай продолжим обучение?</p>
                 </div>
+            </div>
             </div>
         </div>
         <div class="row">
@@ -325,35 +324,35 @@
 
         <div class="row">
             <div class="col-12">
-                <ul class="nav nav-tabs" id="teacher-tab" role="tablist">
+                  <ul class="nav nav-tabs" id="teacher-tab" role="tablist">
                     <li class="nav-item " role="presentation">
-                        <a class="nav-link active pl-nav-link" id="home-tab nav-tab-link" data-toggle="tab" href="#planed-lessons" role="tab" aria-controls="planed-lessons-tab" aria-selected="true">Запланированые занятия</a>
+                      <a class="nav-link active pl-nav-link" id="home-tab nav-tab-link" data-toggle="tab" href="#planed-lessons" role="tab" aria-controls="planed-lessons-tab" aria-selected="true">Запланированые занятия</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link pl-nav-link" id="profile-tab" data-toggle="tab" href="#available-lessons" role="tab" aria-controls="available-lessons-tab" aria-selected="false">Доступные занятия</a>
+                      <a class="nav-link pl-nav-link" id="profile-tab" data-toggle="tab" href="#available-lessons" role="tab" aria-controls="available-lessons-tab" aria-selected="false">Доступные занятия</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link pl-nav-link" id="contact-tab" data-toggle="tab" href="#completed-lessons" role="tab" aria-controls="completed-lessons-tab" aria-selected="false">Завершенные занятия</a>
+                      <a class="nav-link pl-nav-link" id="contact-tab" data-toggle="tab" href="#completed-lessons" role="tab" aria-controls="completed-lessons-tab" aria-selected="false">Завершенные занятия</a>
                     </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
 
                     <!-- 
                         Вкладка запланированые занятия
                     -->
-
+    
                     <div class="tab-pane fade in show active" id="planed-lessons" role="tabpanel" aria-labelledby="planed-lessons-tab">
                         <div class="cabinet-tab-holder">
                             <div class="row planned-lessons-wrapper" id="pl-homework">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-homework">Домашнее задание</button>
+                                        <button class="pl-homework">Домашнее задание</button>    
                                     </div>
                                     <div>
                                         <p>Английский язык</p>
                                     </div>
                                 </div>
-                                <div class="col-12 transfer-lesson"><button data-toggle="modal" data-target="#transfer-lesson" class="transfer-lesson">Перенести занятие</button></div>
+                                <div class="col-12 transfer-lesson"><button  data-toggle="modal" data-target="#transfer-lesson" class="transfer-lesson">Перенести занятие</button></div>
                                 <div class="col-6 col-xl-3 pl-teacher">
                                     <div class="pl-teacher-info">
                                         <img src="/source/images/avatar.png" alt="teachers-photo">
@@ -393,7 +392,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-tutor">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-tutor">Репетитор</button>
+                                        <button class="pl-tutor">Репетитор</button>    
                                     </div>
                                     <div>
                                         <p>Алгебра</p>
@@ -438,7 +437,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-preschool">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-preschool">Дошкольное образование</button>
+                                        <button class="pl-preschool">Дошкольное образование</button>    
                                     </div>
                                     <div>
                                         <p>Психолог</p>
@@ -481,14 +480,14 @@
                                 </div>
                             </div>
 
-                            <!-- 
+                    <!-- 
                         Запланированые уроки которые скоро начнуться
                     -->
-
+                    
                             <div class="row planned-lessons-wrapper" id="pl-homework">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-homework">Домашнее задание</button>
+                                        <button class="pl-homework">Домашнее задание</button>  
                                     </div>
                                     <div>
                                         <p>Английский язык</p>
@@ -533,7 +532,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-tutor">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-tutor">Репетитор</button>
+                                        <button class="pl-tutor">Репетитор</button>    
                                     </div>
                                     <div>
                                         <p>Алгебра</p>
@@ -578,7 +577,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-preschool">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-preschool">Дошкольное образование</button>
+                                        <button class="pl-preschool">Дошкольное образование</button>    
                                     </div>
                                     <div>
                                         <p>Психолог</p>
@@ -622,7 +621,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
 
                     <!-- 
                         Вкладка Доступные занятия
@@ -633,7 +632,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-homework">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-homework">Домашнее задание</button>
+                                        <button class="pl-homework">Домашнее задание</button>  
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-5 col-xl-3 pl-teacher">
@@ -675,7 +674,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-tutor">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-tutor">Репетитор</button>
+                                        <button class="pl-tutor">Репетитор</button>    
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-5 col-xl-3 pl-teacher">
@@ -717,7 +716,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-preschool">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-preschool">Дошкольное образование</button>
+                                        <button class="pl-preschool">Дошкольное образование</button>    
                                     </div>
                                     <div>
                                         <p>Психолог</p>
@@ -762,7 +761,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-tutor">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-tutor">Репетитор</button>
+                                        <button class="pl-tutor">Репетитор</button>    
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-5 col-xl-3 pl-teacher">
@@ -809,13 +808,13 @@
                         Вкладка завершенные занятия
                     -->
 
-
+    
                     <div class="tab-pane fade in show" id="completed-lessons" role="tabpanel" aria-labelledby="completed-lessons-tab">
                         <div class="cabinet-tab-holder">
                             <div class="row planned-lessons-wrapper" id="pl-homework">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-homework">Домашнее задание</button>
+                                        <button class="pl-homework">Домашнее задание</button>  
                                     </div>
                                     <div>
                                         <p>Английский язык</p>
@@ -859,7 +858,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-tutor">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-tutor">Репетитор</button>
+                                        <button class="pl-tutor">Репетитор</button>    
                                     </div>
                                     <div>
                                         <p>Алгебра</p>
@@ -903,7 +902,7 @@
                             <div class="row planned-lessons-wrapper" id="pl-preschool">
                                 <div class="col-12 pl-teacher">
                                     <div>
-                                        <button class="pl-preschool">Дошкольное образование</button>
+                                        <button class="pl-preschool">Дошкольное образование</button>    
                                     </div>
                                     <div>
                                         <p>Психолог</p>
@@ -944,14 +943,14 @@
                                     </div>
                                 </div>
                             </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+             </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 
 <!-- Модалка на отмену занятия -->
@@ -962,10 +961,10 @@
             <div class="modal-header" id="modal-header">
                 <div class="row modal-row">
                     <div class="col-12">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
+                    </div>  
                     <div class="col-12">
                         <h5 class="modal-title" id="mymodal-label">Вы действительно хотите отменить занятие?</h5>
                     </div>
@@ -973,36 +972,34 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        <div class="row modal-content-wrapper">
-                            <div class="col-5 modal-dates">
-                                <div>
-                                    <p>Длительность
-                                        <p>
-                                </div>
-                                <div>
-                                    <p><span>30 минут</span></p>
-                                </div>
+                <div class="form-group">
+                    <div class="row modal-content-wrapper">
+                        <div class="col-5 modal-dates">
+                            <div>
+                                <p>Длительность<p>
                             </div>
-                            <div class="col-7 modal-dates">
-                                <div>
-                                    <p>Запланировано
-                                        <p>
-                                </div>
-                                <div>
-                                    <p><span>7 марта 2021 в 15:00</span></p>
-                                </div>
-                            </div>
-                            <div class="col-12 modal-teacher">
-                                <img src="/source/images/user-avatar.png" alt="">
-                                <p>Иван Городенко</p>
+                            <div>
+                                <p><span>30 минут</span></p>
                             </div>
                         </div>
+                        <div class="col-7 modal-dates">
+                            <div>
+                                <p>Запланировано<p>
+                            </div>
+                            <div>
+                                <p><span>7 марта 2021 в 15:00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 modal-teacher">
+                            <img src="/source/images/user-avatar.png" alt="">
+                            <p>Иван Городенко</p>
+                        </div>
                     </div>
-                    <div class="form-group md-modal-form">
-                        <label for="cancel-reason" class="col-form-label">Укажите причину отмены</label>
-                        <input type="text" class="form-control" id="cancel-reason" placeholder="Напишите...">
-                    </div>
+                </div>
+                <div class="form-group md-modal-form">
+                    <label for="cancel-reason" class="col-form-label">Укажите причину отмены</label>
+                    <input type="text" class="form-control" id="cancel-reason" placeholder="Напишите...">
+                </div>
                 </form>
             </div>
             <div class="modal-footer md-modal-footer">
@@ -1021,10 +1018,10 @@
             <div class="modal-header" id="modal-header">
                 <div class="row modal-row">
                     <div class="col-12">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
+                    </div>  
                     <div class="col-12">
                         <h5 class="modal-title" id="mymodal-label">Перенести занятие</h5>
                     </div>
@@ -1032,36 +1029,34 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        <div class="row modal-content-wrapper">
-                            <div class="col-5 modal-dates">
-                                <div>
-                                    <p>Длительность
-                                        <p>
-                                </div>
-                                <div>
-                                    <p><span>30 минут</span></p>
-                                </div>
+                <div class="form-group">
+                    <div class="row modal-content-wrapper">
+                        <div class="col-5 modal-dates">
+                            <div>
+                                <p>Длительность<p>
                             </div>
-                            <div class="col-7 modal-dates">
-                                <div>
-                                    <p>Запланировано
-                                        <p>
-                                </div>
-                                <div>
-                                    <p><span>7 марта 2021 в 15:00</span></p>
-                                </div>
-                            </div>
-                            <div class="col-12 modal-teacher">
-                                <img src="/source/images/user-avatar.png" alt="">
-                                <p>Иван Городенко</p>
+                            <div>
+                                <p><span>30 минут</span></p>
                             </div>
                         </div>
+                        <div class="col-7 modal-dates">
+                            <div>
+                                <p>Запланировано<p>
+                            </div>
+                            <div>
+                                <p><span>7 марта 2021 в 15:00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 modal-teacher">
+                            <img src="/source/images/user-avatar.png" alt="">
+                            <p>Иван Городенко</p>
+                        </div>
                     </div>
-                    <div class="form-group md-modal-form">
-                        <h1 class="transfer-title">Выберете новою дату</h1>
-                        <div>Calendar here</div>
-                    </div>
+                </div>
+                <div class="form-group md-modal-form">
+                    <h1 class="transfer-title">Выберете новою дату</h1>
+                    <div>Calendar here</div>
+                </div>
                 </form>
             </div>
             <div class="modal-footer md-modal-footer">
@@ -1079,10 +1074,10 @@
             <div class="modal-header" id="modal-header">
                 <div class="row modal-row">
                     <div class="col-12">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
+                    </div>  
                     <div class="col-12 #mymodal-title">
                         <h5 class="peak-teacher">Выберите нового преподавателя</h5>
                     </div>
@@ -1090,36 +1085,34 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        <div class="row modal-content-wrapper">
-                            <div class="col-5 modal-dates">
-                                <div>
-                                    <p>Длительность
-                                        <p>
-                                </div>
-                                <div>
-                                    <p><span>30 минут</span></p>
-                                </div>
+                <div class="form-group">
+                    <div class="row modal-content-wrapper">
+                        <div class="col-5 modal-dates">
+                            <div>
+                                <p>Длительность<p>
                             </div>
-                            <div class="col-7 modal-dates">
-                                <div>
-                                    <p>Запланировано
-                                        <p>
-                                </div>
-                                <div>
-                                    <p><span>7 марта 2021 в 15:00</span></p>
-                                </div>
-                            </div>
-                            <div class="col-12 modal-teacher">
-                                <img src="/source/images/user-avatar.png" alt="">
-                                <p>Иван Городенко</p>
+                            <div>
+                                <p><span>30 минут</span></p>
                             </div>
                         </div>
+                        <div class="col-7 modal-dates">
+                            <div>
+                                <p>Запланировано<p>
+                            </div>
+                            <div>
+                                <p><span>7 марта 2021 в 15:00</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 modal-teacher">
+                            <img src="/source/images/user-avatar.png" alt="">
+                            <p>Иван Городенко</p>
+                        </div>
                     </div>
-                    <div class="form-group md-modal-form">
-                        <label for="cancel-reason" class="col-form-label">Укажите причину отмены</label>
-                        <input type="text" class="form-control" id="cancel-reason" placeholder="Напишите...">
-                    </div>
+                </div>
+                <div class="form-group md-modal-form">
+                    <label for="cancel-reason" class="col-form-label">Укажите причину отмены</label>
+                    <input type="text" class="form-control" id="cancel-reason" placeholder="Напишите...">
+                </div>
                 </form>
             </div>
             <div class="modal-footer md-modal-footer">
@@ -1138,10 +1131,10 @@
             <div class="modal-header" id="modal-header">
                 <div class="row modal-row">
                     <div class="col-12">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
+                    </div>  
                     <div class="col-12 #mymodal-title">
                         <h5 class="peak-teacher">Выберите нового преподавателя</h5>
                     </div>
@@ -1149,59 +1142,56 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        <div class="row modal-content-wrapper">
-                            <div class="col-7 modal-dates">
-                                <div>
-                                    <p>Перевести деньги с:
-                                        <p>
-                                </div>
-                            </div>
-                            <div class="col-12 modal-teacher">
-                                <img src="/source/images/user-avatar.png" alt="">
-                                <p>Иван Городенко</p>
+                <div class="form-group">
+                    <div class="row modal-content-wrapper">
+                        <div class="col-7 modal-dates">
+                            <div>
+                                <p>Перевести деньги с:<p>
                             </div>
                         </div>
-                        <div class="row modal-content-item">
-                            <div class="col-7 modal-dates">
-                                <div>
-                                    <p>Перевести деньги на:
-                                        <p>
-                                </div>
+                        <div class="col-12 modal-teacher">
+                            <img src="/source/images/user-avatar.png" alt="">
+                            <p>Иван Городенко</p>
+                        </div>
+                    </div>
+                    <div class="row modal-content-item">
+                        <div class="col-7 modal-dates">
+                            <div>
+                                <p>Перевести деньги на:<p>
                             </div>
-                            <div class="col-12 modal-teacher">
-                                <div class="dropdown peak-teacher-dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
+                        </div>
+                        <div class="col-12 modal-teacher">
+                            <div class="dropdown peak-teacher-dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
                                     Выберите преподавателя
                                 </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Действие</a></li>
-                                        <li><a class="dropdown-item" href="#">Другое действие</a></li>
-                                        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row modal-content-item">
-                            <div class="col-7 modal-dates">
-                                <div>
-                                    <p>Перевести деньги на:
-                                        <p>
-                                </div>
-                            </div>
-                            <div class="col-10 modal-teacher">
-                                <img src="/source/images/avatar.png" alt="">
-                                <p>Анна Городенко</p>
-                            </div>
-                            <div class="col-2">
-                                <button class="into-modal-button"><img src="/source/icons/cancel.svg" alt=""></button>
-                            </div>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Действие</a></li>
+                                  <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                                  <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                                </ul>
+                              </div>
                         </div>
                     </div>
-                    <div class="form-group md-modal-form">
-                        <label for="cancel-reason" class="col-form-label">Укажите причину отмены</label>
-                        <input type="text" class="form-control" id="cancel-reason" placeholder="Напишите...">
+                    <div class="row modal-content-item">
+                        <div class="col-7 modal-dates">
+                            <div>
+                                <p>Перевести деньги на:<p>
+                            </div>
+                        </div>
+                        <div class="col-10 modal-teacher">
+                            <img src="/source/images/avatar.png" alt="">
+                            <p>Анна Городенко</p>
+                        </div>
+                        <div class="col-2">
+                            <button class="into-modal-button"><img src="/source/icons/cancel.svg" alt=""></button>
+                        </div>
                     </div>
+                </div>
+                <div class="form-group md-modal-form">
+                    <label for="cancel-reason" class="col-form-label">Укажите причину отмены</label>
+                    <input type="text" class="form-control" id="cancel-reason" placeholder="Напишите...">
+                </div>
                 </form>
             </div>
             <div class="modal-footer md-modal-footer">
@@ -1211,6 +1201,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 <footer class="d-none">
     footer
@@ -1239,7 +1232,6 @@
         }
     });
 </script>
-
 
 <script>
     // pupil profile select tabs
